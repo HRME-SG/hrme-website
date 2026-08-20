@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Calendar, Mail, Building2, User, MessageSquare } from "lucide-react";
+import { ArrowRight, Check, Mail, Building2, User, MessageSquare } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -53,7 +53,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FORM + CALENDAR */}
+      {/* FORM */}
       <section className="bg-paper py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 lg:grid-cols-12">
@@ -135,26 +135,10 @@ export default function Contact() {
               </Reveal>
             </div>
 
-            {/* CALENDAR + SIDE */}
+            {/* CONTACT DETAILS */}
             <div className="lg:col-span-5">
               <Reveal delay={0.1}>
-                <div className="rounded-3xl border border-dashed border-brand/40 bg-brand-soft/30 p-8">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white">
-                    <Calendar size={20} />
-                  </span>
-                  <h3 className="mt-5 font-heading text-lg font-600 text-ink">Prefer to pick a time?</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Once you send the form, we'll share a calendar link to book a 30-minute consultation directly. (Calendar embed goes here — placeholder for your booking tool of choice.)
-                  </p>
-                  <div className="mt-6 rounded-2xl border border-border bg-paper p-5 text-center">
-                    <p className="text-sm text-muted-foreground">Calendar booking embed</p>
-                    <p className="mt-1 text-xs text-muted-foreground/70">e.g. Calendly / Cal.com — drop-in slot</p>
-                  </div>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.15}>
-                <div className="mt-6 rounded-3xl border border-border bg-card p-8">
+                <div className="rounded-3xl border border-border bg-card p-8">
                   <h3 className="font-heading text-lg font-600 text-ink">Reach us directly</h3>
                   <a href={`mailto:${CONTACT_EMAIL}`} className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline">
                     <Mail size={16} /> {CONTACT_EMAIL}

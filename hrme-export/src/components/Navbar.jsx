@@ -14,24 +14,15 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => setOpen(false), [location.pathname]);
 
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "glass-nav border-b border-border/70 py-3" : "border-b border-transparent py-5"
+        "fixed inset-x-0 top-0 z-50 glass-nav border-b border-border/70 py-3"
       )}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">

@@ -1,88 +1,80 @@
 // Shared site content for HRME — used across Home, Services, Insights.
 
-export const SERVICES = [
+export const PILLARS = [
   {
-    id: "advisory",
-    name: "HR Advisory & Consulting",
-    tagline: "Diagnostic-led problem solving.",
-    summary:
-      "We diagnose the psychological why behind retention, culture, and performance issues — then design the fix that actually moves behaviour, not just the paperwork.",
-    includes: [
-      "Retention & exit-interview diagnostics",
-      "Culture and engagement assessments",
-      "Performance management design",
-      "Manager capability reviews",
-      "Change and restructure facilitation",
-    ],
-    diagnosis: { fix: "Rewrite the performance review form", cause: "Managers avoid the hard conversation" },
+    id: "compliance",
+    name: "Compliance Foundation",
+    tagline: "Contracts, CPF, and work passes done right from day one.",
+    body: "Employment Act-compliant contracts, CPF and payroll setup, and work pass basics — the legal groundwork most SMEs are missing without realising it.",
   },
   {
-    id: "fractional",
-    name: "Fractional & Outsourced HR",
-    tagline: "Senior HR judgment, on tap.",
-    summary:
-      "Ongoing operational support and senior HR judgment for growing teams that need a trusted partner — without the cost of a full-time head of people.",
-    includes: [
-      "Embedded fractional HR lead",
-      "Policy and handbook maintenance",
-      "Employee relations casework",
-      "Onboarding and offboarding design",
-      "Monthly people-health reviews",
-    ],
-    diagnosis: { fix: "Hire an HR manager to 'fix things'", cause: "You need judgment, not another pair of hands" },
+    id: "policies",
+    name: "Policies & Handbook",
+    tagline: "The rulebook that doesn't exist yet.",
+    body: "Leave policy, code of conduct, disciplinary framework, WFH policy — written for how your business actually runs, not copied from a template nobody reads.",
   },
   {
-    id: "systems",
-    name: "HR Systems Implementation",
-    tagline: "Technology that supports the people strategy.",
-    summary:
-      "HRIS and HRMS rollouts designed around how your people actually work — not admin for its own sake. Delivered under client company authorisation.",
-    includes: [
-      "HRIS / HRMS selection and scoping",
-      "Implementation and data migration",
-      "Process and workflow design",
-      "Manager and employee enablement",
-      "Post-go-live optimisation",
-    ],
-    diagnosis: { fix: "Buy the most expensive HRIS", cause: "Your processes don't match the tool" },
+    id: "recruitment",
+    name: "Recruitment & Onboarding",
+    tagline: "A real process instead of 'figure it out.'",
+    body: "Job description templates, interview scorecards, offer letters, and an onboarding checklist that gets new hires productive instead of lost.",
   },
   {
-    id: "workpass",
-    name: "Work Pass Advisory",
-    tagline: "EP / S Pass guidance, clearly explained.",
-    summary:
-      "Employment-law and work-pass guidance for Singapore employers — what the rules mean for your hiring plan, and how to stay on the right side of them. Advisory only.",
-    includes: [
-      "EP / S Pass eligibility read-outs",
-      "Salary framework and benchmarking guidance",
-      "MOM compliance advisory",
-      "Renewal and appeal strategy guidance",
-      "Employment-law risk reviews",
-    ],
-    diagnosis: { fix: "Resubmit the application faster", cause: "The role itself doesn't qualify" },
+    id: "performance",
+    name: "Performance & Growth",
+    tagline: "A review system people actually use.",
+    body: "A simple, working performance and goal-setting framework — built to be used quarter after quarter, not a form that gets filled once a year under duress.",
   },
   {
-    id: "workshops",
-    name: "Workplace Psychology Workshops",
-    tagline: "The emotional drivers, made practical.",
-    summary:
-      "Practical sessions that give your managers the psychology behind engagement, conflict, and change resistance — so they lead people, not just tasks.",
-    includes: [
-      "Psychological safety in practice",
-      "Conflict and difficult conversations",
-      "Leading through change and resistance",
-      "Engagement beyond the survey",
-      "Custom team dynamics sessions",
-    ],
-    diagnosis: { fix: "Run another engagement survey", cause: "No one feels safe answering it honestly" },
+    id: "payroll",
+    name: "Payroll / HRIS Setup",
+    tagline: "The right system for your size — not enterprise overkill.",
+    body: "Selecting and implementing a lightweight HRIS and payroll system that fits an SME's actual headcount and budget, set up correctly from the start.",
+  },
+  {
+    id: "offboarding",
+    name: "Exit & Offboarding",
+    tagline: "Clean, compliant, not improvised each time.",
+    body: "A repeatable, compliant process for exits and terminations — so every departure is handled consistently, not reinvented under pressure.",
   },
 ];
 
+export const SERVICE_TIERS = [
+  {
+    id: "foundation-setup",
+    name: "Foundation Setup",
+    tagline: "We build your HR foundation from the ground up.",
+    summary:
+      "A hands-on, one-time project where HRME builds out your HR pillars from scratch — tailored to your business, not templates you're left to figure out alone.",
+    format: "One-time project · scope varies by company size and starting point",
+    cta: "Get a quote",
+    diagnosis: { fix: "Buy an HR template pack off the internet", cause: "It doesn't fit how your business actually runs" },
+  },
+  {
+    id: "fractional-retainer",
+    name: "Fractional Retainer",
+    tagline: "We run it for you, month to month.",
+    summary:
+      "Once your foundation exists, HRME handles the day-to-day HR matters that come up — hiring decisions, disputes, performance issues, warning letters — using the systems already built.",
+    format: "Ongoing monthly engagement · SGD 3,000–5,000/month depending on scope",
+    cta: "Talk to us",
+    diagnosis: { fix: "Hire a full-time Head of HR", cause: "You need judgment on tap, not another headcount" },
+  },
+];
+
+export const ADD_ON = {
+  id: "workshops",
+  name: "Workplace Psychology Workshops",
+  tagline: "The emotional drivers, made practical.",
+  summary:
+    "Practical sessions that give your managers the psychology behind engagement, conflict, and change resistance — so they lead people, not just tasks.",
+};
+
 export const PAIN_POINTS = [
-  "We keep losing good people and exit interviews don't tell us why.",
-  "Our HR policies are compliant but our culture still feels broken.",
-  "Generic HR consultants give us frameworks, not answers.",
-  "We're growing too fast to keep 'winging it' on people decisions.",
+  "We're growing past 'the founder handles everyone' but can't justify a full-time Head of HR yet.",
+  "We don't actually have compliant contracts, policies, or a real onboarding process — just whatever's in someone's head.",
+  "Every time someone underperforms or leaves, we're improvising the process from scratch.",
+  "We tried a generic HR template pack and it didn't fit how we actually operate.",
   "I need someone who understands both the psychology and the paperwork.",
 ];
 

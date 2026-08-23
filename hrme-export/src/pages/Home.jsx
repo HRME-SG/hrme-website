@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, ShieldCheck, Stethoscope, Quote } from "lucide-react";
+import { ArrowRight, Brain, ShieldCheck, Stethoscope, Quote, MessageCircle } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import DiagnosisDevice from "@/components/DiagnosisDevice";
 import DiagnosticReport from "@/components/DiagnosticReport";
 import CTASection from "@/components/CTASection";
-import { PAIN_POINTS, DIAGNOSES, SERVICES, METHOD_STEPS, INSIGHTS } from "@/lib/siteData";
+import { PAIN_POINTS, DIAGNOSES, PILLARS, SERVICE_TIERS, METHOD_STEPS, INSIGHTS } from "@/lib/siteData";
 
 export default function Home() {
   return (
@@ -25,15 +25,15 @@ export default function Home() {
               </span>
             </Reveal>
             <Reveal delay={0.05}>
-              <h1 className="mt-6 font-heading text-4xl font-700 leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-[4.1rem]">
-                We don't just tell you what the SOP says.
+              <h1 className="mt-6 font-heading text-4xl font-700 leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-[3.85rem]">
+                Most SMEs don't need a Head of HR.
                 <br />
-                <span className="text-gradient-brand">We tell you what's actually driving the behaviour.</span>
+                <span className="text-gradient-brand">They need the foundation one would have built.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/60">
-                HRME is a full-service HR consultancy for Singapore SMEs. Our consultants pair formal HR credentials with a foundation in organisational psychology — so you get the real cause, not just the compliant fix.
+                HRME builds the HR systems your business is missing — contracts, policies, onboarding, performance, payroll, and offboarding — then runs them for you, so you're not figuring this out alone.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -70,6 +70,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== OPEN INVITATION BAND ===== */}
+      <section className="bg-brand-soft/60 py-8">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <p className="flex items-center gap-3 text-base font-medium text-ink">
+            <MessageCircle size={20} className="shrink-0 text-brand" />
+            Facing an HR challenge right now? Feel free to reach out — we're happy to just talk it through.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-transform hover:scale-[1.03]"
+          >
+            Get in touch <ArrowRight size={15} />
+          </Link>
+        </div>
+      </section>
+
       {/* ===== DIAGNOSIS DEVICE BAND ===== */}
       <section className="relative bg-paper py-24 sm:py-32">
         <div className="mx-auto max-w-5xl px-6">
@@ -87,8 +103,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== SIX PILLARS ===== */}
+      <section className="bg-paper-2/50 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionHeading
+            align="center"
+            eyebrow="The six pillars"
+            title="The HR foundation most SMEs are missing."
+            description="Not vague advisory — six concrete systems every business needs, whether or not they've built them yet."
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {PILLARS.map((p, i) => (
+              <Reveal key={p.id} delay={(i % 3) * 0.07}>
+                <div className="card-lift h-full rounded-2xl border border-border bg-card p-7">
+                  <span className="font-heading text-2xl font-700 text-gradient-brand tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-4 font-heading text-lg font-600 text-ink">{p.name}</h3>
+                  <p className="mt-2 text-sm text-brand">{p.tagline}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== PAIN POINTS ===== */}
-      <section className="relative overflow-hidden bg-paper-2/50 py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-paper py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-14 lg:grid-cols-12">
             <div className="lg:col-span-5">
@@ -124,51 +166,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SERVICES PREVIEW ===== */}
-      <section className="bg-paper py-24 sm:py-32">
+      {/* ===== TWO WAYS TO WORK WITH US ===== */}
+      <section className="bg-paper-2/50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeading
-              eyebrow="What we do"
-              title="Five services. One diagnostic lens."
-              description="Every engagement starts with the same question: what's the behaviour, and what's driving it?"
-            />
-            <Reveal delay={0.1}>
-              <Link to="/services" className="group inline-flex items-center gap-2 text-sm font-medium text-brand">
-                All services <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </Reveal>
-          </div>
-
-          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s, i) => (
-              <Reveal key={s.id} delay={(i % 3) * 0.07}>
-                <Link
-                  to={`/services#${s.id}`}
-                  className="card-lift group flex h-full flex-col rounded-2xl border border-border bg-card p-7"
-                >
+          <SectionHeading
+            align="center"
+            eyebrow="How we work with you"
+            title="Two ways to work with HRME."
+            description="Most clients start with Foundation Setup, then move into a Retainer once the systems exist and need running."
+          />
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            {SERVICE_TIERS.map((s, i) => (
+              <Reveal key={s.id} delay={i * 0.08}>
+                <div className="card-lift flex h-full flex-col rounded-3xl border border-border bg-card p-8 sm:p-10">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
                     <Stethoscope size={20} />
                   </span>
-                  <h3 className="mt-5 font-heading text-xl font-600 text-ink">{s.name}</h3>
+                  <h3 className="mt-6 font-heading text-2xl font-600 text-ink">{s.name}</h3>
                   <p className="mt-2 text-sm text-brand">{s.tagline}</p>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-ink">
-                    Read more
-                    <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
+                  <p className="mt-4 flex-1 text-base leading-relaxed text-muted-foreground">{s.summary}</p>
+                  <p className="mt-6 text-xs uppercase tracking-[0.14em] text-muted-foreground/80">{s.format}</p>
+                  <Link
+                    to="/contact"
+                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-paper transition-transform hover:scale-[1.03]"
+                  >
+                    {s.cta} <ArrowRight size={16} />
+                  </Link>
+                </div>
               </Reveal>
             ))}
-            <Reveal delay={0.14}>
-              <div className="flex h-full flex-col justify-center rounded-2xl border border-dashed border-brand/40 bg-brand-soft/50 p-7">
-                <p className="font-heading text-lg font-600 text-ink">Not sure which fits?</p>
-                <p className="mt-2 text-sm text-muted-foreground">Most engagements blend two or three. We'll map it on a call.</p>
-                <Link to="/contact" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-brand">
-                  Book a consultation <ArrowRight size={16} />
-                </Link>
-              </div>
-            </Reveal>
           </div>
         </div>
       </section>

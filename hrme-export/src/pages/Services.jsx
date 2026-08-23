@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Stethoscope, Info } from "lucide-react";
+import { ArrowRight, Check, Stethoscope, MessageCircle } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import DiagnosisDevice from "@/components/DiagnosisDevice";
 import CTASection from "@/components/CTASection";
-import { SERVICES } from "@/lib/siteData";
+import { SERVICE_TIERS, PILLARS, ADD_ON } from "@/lib/siteData";
 
 export default function Services() {
   return (
@@ -22,22 +22,38 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-6 font-heading text-4xl font-700 leading-[1.08] text-white sm:text-5xl md:text-6xl">
-              Five services. <span className="text-gradient-brand">One diagnostic lens.</span>
+              Two ways to work with us. <span className="text-gradient-brand">One HR foundation.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
-              Every engagement starts with the same question — what's the behaviour, and what's driving it? — then lands in the service that fits.
+              We build the systems your business is missing, then run them for you. Most clients start with Foundation Setup and move into a Retainer once there's something worth maintaining.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* SERVICES LIST */}
+      {/* OPEN INVITATION */}
+      <section className="bg-brand-soft/60 py-8">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 text-center sm:flex-row sm:justify-between sm:text-left">
+          <p className="flex items-center gap-3 text-base font-medium text-ink">
+            <MessageCircle size={20} className="shrink-0 text-brand" />
+            Not sure which fits, or just want to talk through what you're facing? Feel free to reach out — no pitch, just a conversation.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-transform hover:scale-[1.03]"
+          >
+            Get in touch <ArrowRight size={15} />
+          </Link>
+        </div>
+      </section>
+
+      {/* THE TWO TIERS */}
       <section className="bg-paper py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="space-y-24">
-            {SERVICES.map((s, i) => (
+            {SERVICE_TIERS.map((s, i) => (
               <div key={s.id} id={s.id} className="scroll-mt-28">
                 <div className="grid gap-10 lg:grid-cols-12">
                   <div className="lg:col-span-5">
@@ -48,28 +64,24 @@ export default function Services() {
                       <h2 className="mt-4 font-heading text-2xl font-600 text-ink sm:text-3xl">{s.name}</h2>
                       <p className="mt-2 text-base text-brand">{s.tagline}</p>
                       <p className="mt-5 text-base leading-relaxed text-muted-foreground">{s.summary}</p>
-                      {s.note && (
-                        <p className="mt-5 flex items-start gap-2 rounded-xl border border-amber-300/50 bg-amber-50 p-4 text-sm text-amber-800">
-                          <Info size={16} className="mt-0.5 shrink-0" /> {s.note}
-                        </p>
-                      )}
+                      <p className="mt-5 text-xs uppercase tracking-[0.14em] text-muted-foreground/80">{s.format}</p>
                       <Link
                         to="/contact"
                         className="mt-7 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-paper transition-transform hover:scale-[1.03]"
                       >
-                        Book this service <ArrowRight size={16} />
+                        {s.cta} <ArrowRight size={16} />
                       </Link>
                     </Reveal>
                   </div>
                   <div className="lg:col-span-7">
                     <Reveal delay={0.1}>
                       <div className="rounded-2xl border border-border bg-card p-7">
-                        <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">What's included</p>
+                        <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">Covers all six pillars</p>
                         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                          {s.includes.map((item) => (
-                            <li key={item} className="flex items-start gap-2.5 text-sm text-ink">
+                          {PILLARS.map((p) => (
+                            <li key={p.id} className="flex items-start gap-2.5 text-sm text-ink">
                               <Check size={16} className="mt-0.5 shrink-0 text-brand" />
-                              {item}
+                              {p.name}
                             </li>
                           ))}
                         </ul>
@@ -85,6 +97,56 @@ export default function Services() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PILLARS DETAIL */}
+      <section className="bg-paper-2/50 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionHeading
+            align="center"
+            eyebrow="What 'foundation' actually means"
+            title="The six pillars, in detail."
+            description="Both Foundation Setup and Retainer engagements are built around these — whichever ones your business needs most."
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {PILLARS.map((p, i) => (
+              <Reveal key={p.id} delay={(i % 3) * 0.07}>
+                <div className="card-lift h-full rounded-2xl border border-border bg-card p-7">
+                  <span className="font-heading text-2xl font-700 text-gradient-brand tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-4 font-heading text-lg font-600 text-ink">{p.name}</h3>
+                  <p className="mt-2 text-sm text-brand">{p.tagline}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ADD-ON: WORKSHOPS */}
+      <section className="bg-paper py-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <Reveal>
+            <div className="flex flex-col items-start gap-5 rounded-2xl border border-dashed border-brand/40 bg-brand-soft/30 p-8 sm:flex-row sm:items-center">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ink text-paper">
+                <Stethoscope size={20} />
+              </span>
+              <div className="flex-1">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-brand">Also available</p>
+                <h3 className="mt-1 font-heading text-lg font-600 text-ink">{ADD_ON.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{ADD_ON.summary}</p>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-muted"
+              >
+                Ask about this <ArrowRight size={15} />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 

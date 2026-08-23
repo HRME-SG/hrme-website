@@ -5,60 +5,91 @@ export const PILLARS = [
     id: "compliance",
     name: "Compliance Foundation",
     tagline: "Contracts, CPF, and work passes done right from day one.",
-    body: "Employment Act-compliant contracts, CPF and payroll setup, and work pass basics — the legal groundwork most SMEs are missing without realising it.",
+    summary:
+      "Employment Act-compliant contracts, CPF and payroll setup, and work pass basics — the legal groundwork most SMEs are missing without realising it.",
+    includes: [
+      "Employment contract drafting & review",
+      "CPF and statutory compliance setup",
+      "Work pass eligibility guidance (advisory)",
+      "Employment-law risk review",
+      "Compliance audit for existing practices",
+    ],
+    diagnosis: { fix: "Copy a contract template off the internet", cause: "It doesn't match your actual employment terms" },
   },
   {
     id: "policies",
     name: "Policies & Handbook",
     tagline: "The rulebook that doesn't exist yet.",
-    body: "Leave policy, code of conduct, disciplinary framework, WFH policy — written for how your business actually runs, not copied from a template nobody reads.",
+    summary:
+      "Leave policy, code of conduct, disciplinary framework, WFH policy — written for how your business actually runs, not copied from a template nobody reads.",
+    includes: [
+      "Employee handbook development",
+      "Leave & attendance policy design",
+      "Code of conduct & disciplinary framework",
+      "WFH / flexible work policy",
+      "Policy rollout & manager briefing",
+    ],
+    diagnosis: { fix: "Buy a generic handbook template", cause: "It doesn't reflect how your team actually works" },
   },
   {
     id: "recruitment",
-    name: "Recruitment & Onboarding",
+    name: "Recruitment & Onboarding Systems",
     tagline: "A real process instead of 'figure it out.'",
-    body: "Job description templates, interview scorecards, offer letters, and an onboarding checklist that gets new hires productive instead of lost.",
+    summary:
+      "Job description templates, interview scorecards, offer letters, and an onboarding checklist that gets new hires productive instead of lost.",
+    includes: [
+      "Job description & scorecard templates",
+      "Interview process design",
+      "Offer letter templates",
+      "Onboarding checklist & first-90-days plan",
+      "Hiring manager enablement",
+    ],
+    diagnosis: { fix: "Post the job and wing the interview", cause: "No structure means no consistent hiring signal" },
   },
   {
     id: "performance",
-    name: "Performance & Growth",
+    name: "Performance & Growth Systems",
     tagline: "A review system people actually use.",
-    body: "A simple, working performance and goal-setting framework — built to be used quarter after quarter, not a form that gets filled once a year under duress.",
+    summary:
+      "A simple, working performance and goal-setting framework — built to be used quarter after quarter, not a form that gets filled once a year under duress.",
+    includes: [
+      "Performance review framework design",
+      "Goal-setting & OKR structure",
+      "Manager coaching guides",
+      "Performance improvement plan (PIP) templates",
+      "Promotion & compensation review structure",
+    ],
+    diagnosis: { fix: "Send out a review form once a year", cause: "No one uses it because it was never built to be used" },
   },
   {
     id: "payroll",
     name: "Payroll / HRIS Setup",
     tagline: "The right system for your size — not enterprise overkill.",
-    body: "Selecting and implementing a lightweight HRIS and payroll system that fits an SME's actual headcount and budget, set up correctly from the start.",
+    summary:
+      "Selecting and implementing a lightweight HRIS and payroll system that fits an SME's actual headcount and budget, set up correctly from the start.",
+    includes: [
+      "HRIS / payroll system selection",
+      "Implementation & data migration",
+      "Process & workflow design",
+      "Manager and employee enablement",
+      "Post-go-live support",
+    ],
+    diagnosis: { fix: "Buy the most expensive HRIS", cause: "Your processes don't match the tool" },
   },
   {
     id: "offboarding",
     name: "Exit & Offboarding",
     tagline: "Clean, compliant, not improvised each time.",
-    body: "A repeatable, compliant process for exits and terminations — so every departure is handled consistently, not reinvented under pressure.",
-  },
-];
-
-export const SERVICE_TIERS = [
-  {
-    id: "foundation-setup",
-    name: "Foundation Setup",
-    tagline: "We build your HR foundation from the ground up.",
     summary:
-      "A hands-on, one-time project where HRME builds out your HR pillars from scratch — tailored to your business, not templates you're left to figure out alone.",
-    format: "One-time project · scope varies by company size and starting point",
-    cta: "Get a quote",
-    diagnosis: { fix: "Buy an HR template pack off the internet", cause: "It doesn't fit how your business actually runs" },
-  },
-  {
-    id: "fractional-retainer",
-    name: "Fractional Retainer",
-    tagline: "We run it for you, month to month.",
-    summary:
-      "Once your foundation exists, HRME handles the day-to-day HR matters that come up — hiring decisions, disputes, performance issues, warning letters — using the systems already built.",
-    format: "Ongoing monthly engagement · SGD 3,000–5,000/month depending on scope",
-    cta: "Talk to us",
-    diagnosis: { fix: "Hire a full-time Head of HR", cause: "You need judgment on tap, not another headcount" },
+      "A repeatable, compliant process for exits and terminations — so every departure is handled consistently, not reinvented under pressure.",
+    includes: [
+      "Termination & resignation process design",
+      "Exit interview framework",
+      "Warning letter & disciplinary documentation templates",
+      "Final settlement & compliance checklist",
+      "Knowledge-transfer process",
+    ],
+    diagnosis: { fix: "Improvise the exit conversation", cause: "Every departure gets handled differently, and inconsistently" },
   },
 ];
 
@@ -104,54 +135,54 @@ export const METHOD_STEPS = [
   {
     step: "04",
     title: "Deploy",
-    body: "We help you roll it out with managers, measure it, and adjust. Diagnosis you can see in the numbers.",
+    body: "We build it with you and hand it over ready to use — documented, trained, and yours to run.",
   },
 ];
 
 export const INSIGHTS = [
   {
-    slug: "exit-interviews-lie",
-    tag: "Retention",
-    hook: "Your exit interviews are lying to you.",
+    slug: "contracts-dont-say",
+    tag: "Compliance",
+    hook: "Your employment contracts probably don't say what you think they say.",
     scenario:
-      "A 60-person tech firm lost four senior engineers in a quarter. Every exit interview cited 'better opportunity.' Polite, tidy, and almost entirely untrue.",
+      "A 30-person firm had contracts for every employee — drafted years ago from a template, never updated as roles and pay structures changed.",
     hardTruth:
-      "People don't tell you the real reason they're leaving — they tell you the reason that's safe to say.",
+      "A contract that was compliant when it was written isn't automatically compliant now. Employment law, your actual practices, and the original template drift apart quietly, every year.",
     bullets: [
-      "'Better opportunity' is the exit-interview equivalent of 'it's not you, it's me.'",
-      "The real driver is almost always a manager interaction, not a competitor's offer.",
-      "If you only hear it on the way out, you built a culture where it wasn't safe to say it earlier.",
+      "Most SMEs' contracts were written once and never revisited.",
+      "The gap between what's written and what's actually practiced is exactly where disputes happen.",
+      "A five-minute contract review now is cheaper than a dispute later.",
     ],
-    question: "When was the last time an employee told you a hard truth while they still worked for you?",
+    question: "When did you last actually re-read your own employment contract template?",
   },
   {
-    slug: "compliant-culture",
-    tag: "Culture",
-    hook: "Compliance is not culture.",
+    slug: "cost-of-no-onboarding",
+    tag: "Recruitment",
+    hook: "The real cost of no onboarding process isn't the paperwork. It's the ramp-up time.",
     scenario:
-      "A professional-services firm had a flawless handbook, spot-on leave policies, and a team that quietly stopped speaking up in meetings.",
+      "A tech firm's new hires took two to three months to become fully productive — not because they were unqualified, but because there was no structured first-90-days plan.",
     hardTruth:
-      "You can be fully compliant and still have a culture where nobody raises the real problem.",
+      "Without a real onboarding system, every new hire's ramp-up time depends entirely on which manager they happen to land under.",
     bullets: [
-      "Policies set the floor. Psychological safety sets the ceiling.",
-      "A culture audit that only reads your handbook audits nothing.",
-      "The gap between 'what's written' and 'what's felt' is where your attrition lives.",
+      "Ad-hoc onboarding means inconsistent ramp-up, every single hire.",
+      "A documented first-90-days plan is one of the highest-leverage systems an SME can build.",
+      "The cost isn't visible on a P&L line — it's buried in months of under-productivity.",
     ],
-    question: "If we audited your culture by behaviour, not by document, what would we find?",
+    question: "If your best manager left tomorrow, would new hires still ramp up the same way?",
   },
   {
-    slug: "change-resistance",
-    tag: "Change",
-    hook: "Resistance to change isn't stubbornness. It's information.",
+    slug: "handbook-doesnt-protect",
+    tag: "Policies",
+    hook: "A handbook that isn't followed doesn't protect you. It just documents what you didn't do.",
     scenario:
-      "A retail chain rolled out a new scheduling system. Managers 'resisted.' Leadership called it adoption problems. The real issue was never the software.",
+      "A firm had a full employee handbook — leave policy, code of conduct, disciplinary process — that nobody, including managers, had actually read since it was issued.",
     hardTruth:
-      "What looks like resistance is usually a prediction — about workload, fairness, or whether anyone listened.",
+      "A policy that exists on paper but isn't applied consistently is worse than no policy at all in a dispute — it shows you knew the standard and didn't follow it.",
     bullets: [
-      "People resist change they weren't consulted on, not change itself.",
-      "The fastest adopters are the ones who felt heard before the rollout.",
-      "If you have to 'manage' resistance, you skipped a step upstream.",
+      "A handbook only protects you if your actual practice matches what it says.",
+      "Most SMEs' handbooks were written once, distributed once, and never revisited.",
+      "Rolling out a policy means briefing managers on it, not just emailing a PDF.",
     ],
-    question: "Did your last change fail on rollout — or on the listening that never happened before it?",
+    question: "If we asked your managers to quote your own disciplinary policy, could they?",
   },
 ];

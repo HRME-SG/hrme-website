@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, ShieldCheck, Users, Eye, Compass, Layers } from "lucide-react";
+import { ArrowRight, ShieldCheck, Users, Wrench, Layers, FileCheck, Hammer } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import DiagnosisDevice from "@/components/DiagnosisDevice";
 import CTASection from "@/components/CTASection";
 
 const VALUES = [
-  { icon: Eye, title: "Diagnose before we prescribe", body: "We never hand you a framework we haven't pressure-tested against your actual behaviour." },
-  { icon: Brain, title: "Psychology, then policy", body: "Policy is the floor. The behaviour is the ceiling. We design for both, in that order." },
-  { icon: Compass, title: "Plainly said", body: "No jargon, no 'thought leadership.' Just the hard truth, said in a way you can act on." },
+  { icon: Hammer, title: "Built to be used", body: "We don't hand over a document and disappear. Every system we build is designed to actually run, day to day, not sit in a drawer." },
+  { icon: FileCheck, title: "Compliant by construction", body: "Every contract, policy, and process is built correct from the start — grounded in Singapore employment law, not adapted after the fact." },
+  { icon: Wrench, title: "Practical, not theoretical", body: "No frameworks for their own sake. Every pillar we build earns its place by being something your team will actually use." },
   { icon: Layers, title: "Institutional, not personal", body: "You get a firm's depth of judgment, not a single person's bandwidth." },
 ];
 
@@ -28,12 +27,12 @@ export default function About() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-6 font-heading text-4xl font-700 leading-[1.08] text-white sm:text-5xl md:text-6xl">
-              We're the HR firm that <span className="text-gradient-brand">reads the room</span> — not just the handbook.
+              We're the HR firm that <span className="text-gradient-brand">builds the foundation</span> — not just the advice.
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
-              HRME is a full-service HR consultancy, not a personal brand. Our consultants bring formal HR credentials and a foundation in organisational psychology to every engagement — so you get a firm's depth of judgment, not a single voice.
+              HRME builds the HR systems Singapore SMEs are missing — contracts, policies, onboarding, performance, payroll, and offboarding. Our consultants bring formal HR credentials and hands-on experience building HR functions from scratch, so what we build actually holds up.
             </p>
           </Reveal>
         </div>
@@ -45,21 +44,27 @@ export default function About() {
           <div className="grid gap-14 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <SectionHeading
-                eyebrow="Our philosophy"
-                title="The 'why' is the whole point."
-                description="Most HR work stops at the symptom: turnover, a broken review cycle, a culture that 'feels off.' We start there — and keep going until we've found the behaviour driving it."
+                eyebrow="Our approach"
+                title="Most SMEs don't lack HR advice. They lack HR infrastructure."
+                description="A founder can usually tell you what's going wrong. What's missing is the actual system — the contract, the policy, the process — to fix it and keep it fixed."
               />
             </div>
             <div className="lg:col-span-7">
-              <div className="space-y-4">
-                <DiagnosisDevice index={0} fix="Update the employee handbook" cause="They don't feel safe raising it" />
-                <DiagnosisDevice index={1} fix="Run another engagement survey" cause="No one trusts it's anonymous" />
-                <DiagnosisDevice index={2} fix="Rewrite the performance review" cause="Managers avoid the hard conversation" />
-              </div>
               <Reveal delay={0.1}>
-                <p className="mt-8 text-base leading-relaxed text-muted-foreground">
-                  That gap — between the obvious fix and the real cause — is where our consultants live. It's also where the work that actually sticks gets done.
-                </p>
+                <div className="space-y-5">
+                  <div className="rounded-2xl border border-border bg-card p-6">
+                    <p className="text-sm font-medium text-brand">The pattern we see repeatedly</p>
+                    <p className="mt-2 text-base leading-relaxed text-ink">
+                      A business grows past "the founder handles everyone" — but nobody ever sat down and built the contracts, the onboarding process, the performance system, or the exit procedure. Every HR moment gets improvised, one more time, under pressure.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-border bg-card p-6">
+                    <p className="text-sm font-medium text-brand">What we build instead</p>
+                    <p className="mt-2 text-base leading-relaxed text-ink">
+                      A working foundation across six pillars — compliance, policies, recruitment, performance, payroll systems, and offboarding — built for your business specifically, documented, and handed over ready to run.
+                    </p>
+                  </div>
+                </div>
               </Reveal>
             </div>
           </div>
@@ -72,14 +77,14 @@ export default function About() {
           <SectionHeading
             align="center"
             eyebrow="The firm's credentials"
-            title="Formal HR credentials, used by psychology-literate consultants."
-            description="Credentials matter — but only when the people holding them know how to read behaviour, not just policy. That combination is the firm's capability."
+            title="Formal HR credentials, applied to real infrastructure."
+            description="Credentials matter — but only when the people holding them know how to actually build a working HR function, not just advise on one."
           />
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {[
               { tag: "SHRM-SCP", title: "Senior Certified Professional", body: "The senior global HR credential — strategy, behavioural competency, and the full people function." },
               { tag: "IHRP-SP", title: "Singapore HR, Senior", body: "The Singapore standard for senior HR practitioners, mapped to local employment law and practice." },
-              { tag: "Org. psychology", title: "Behavioural foundation", body: "The lens we apply to every symptom: safety, role clarity, recognition, trust, and change." },
+              { tag: "13+ years", title: "Hands-on HR leadership", body: "Built HR functions from scratch at multiple companies — not theory, direct experience standing up the same six pillars we build for clients." },
             ].map((c, i) => (
               <Reveal key={c.tag} delay={i * 0.08}>
                 <div className="card-lift h-full rounded-2xl border border-border bg-card p-8">
@@ -99,7 +104,7 @@ export default function About() {
       {/* VALUES */}
       <section className="bg-paper py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading eyebrow="How we work with you" title="Four things you can expect from every engagement." />
+          <SectionHeading eyebrow="How we build" title="Four things you can expect from every engagement." />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v, i) => {
               const Icon = v.icon;
@@ -129,7 +134,7 @@ export default function About() {
                 A team of consultants, not a single founder's story.
               </h2>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                HRME was built as an institutional firm. When you work with us, you get the combined judgment of consultants who've held senior HR and people roles — backed by a shared method and a shared standard. No single point of failure, no solo bandwidth limits.
+                HRME was built as an institutional firm. When you work with us, you get the combined judgment of consultants who've held senior HR roles and built HR functions from the ground up — backed by a shared method and a shared standard. No single point of failure, no solo bandwidth limits.
               </p>
               <Link
                 to="/contact"
@@ -142,7 +147,7 @@ export default function About() {
         </div>
       </section>
 
-      <CTASection title="Want a firm that reads the room?" description="Book a consultation. We'll bring the credentials and the psychology — in that order." />
+      <CTASection title="Want a firm that builds, not just advises?" description="Book a consultation. We'll show you exactly what's missing — and what it takes to build it." />
     </>
   );
 }

@@ -6,7 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import { INSIGHTS } from "@/lib/siteData";
 
-const TAGS = ["All", "Retention", "Culture", "Change"];
+const TAGS = ["All", "Compliance", "Recruitment", "Policies"];
 
 export default function Insights() {
   const [filter, setFilter] = useState("All");

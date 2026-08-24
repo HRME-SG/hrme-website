@@ -91,9 +91,9 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             align="center"
-            eyebrow="The HRME method"
-            title={<>Most HR consultants recite the framework. <span className="text-gradient">We diagnose the psychology.</span></>}
-            description="Here's the recurring pattern across the work we do — the obvious HR fix, struck through, beside the real cause our consultants find underneath."
+            eyebrow="What's usually missing"
+            title={<>Most SMEs patch the symptom. <span className="text-gradient">We build what's actually missing.</span></>}
+            description="Here's the recurring pattern across the work we do — the quick fix, struck through, beside the real gap our consultants find underneath."
           />
           <div className="mt-14 space-y-4">
             {DIAGNOSES.map((d, i) => (
@@ -149,7 +149,7 @@ export default function Home() {
             <div className="lg:col-span-5">
               <SectionHeading
                 eyebrow="Sound familiar?"
-                title="The five things HR Directors quietly tell us."
+                title="The five things business owners quietly tell us."
                 description="If any of these is sitting in your head right now, you're exactly who we work with."
               />
               <Reveal delay={0.1}>
@@ -186,8 +186,8 @@ export default function Home() {
           <SectionHeading
             dark
             eyebrow="How we work"
-            title={<>Diagnose. Decode. Design. Deploy.</>}
-            description="A method that turns 'our culture feels broken' into a behaviour you can actually change."
+            title={<>Assess. Build. Document. Handover.</>}
+            description="A method that turns 'we don't have this' into a system your team actually uses."
           />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {METHOD_STEPS.map((m, i) => (
@@ -213,7 +213,7 @@ export default function Home() {
                 <div className="relative rounded-3xl border border-border bg-card p-8 shadow-xl">
                   <Quote className="text-brand" size={32} />
                   <p className="mt-5 font-heading text-2xl font-500 leading-snug text-ink">
-                    "We're not a founder with a framework. We're a firm of consultants who read the room — the policy and the people."
+                    "We don't hand you a framework and walk away. We build the system, document it properly, and make sure your team can actually run it."
                   </p>
                   <p className="mt-6 text-sm text-muted-foreground">— The HRME consulting team</p>
                   <div className="mt-8 grid grid-cols-3 gap-4 border-t border-border pt-6">
@@ -226,8 +226,8 @@ export default function Home() {
                       <p className="mt-1 text-xs text-muted-foreground">Singapore HR</p>
                     </div>
                     <div>
-                      <p className="font-heading text-2xl font-700 text-gradient-brand">Org. psych</p>
-                      <p className="mt-1 text-xs text-muted-foreground">Behavioural foundation</p>
+                      <p className="font-heading text-2xl font-700 text-gradient-brand">10+ years</p>
+                      <p className="mt-1 text-xs text-muted-foreground">Hands-on HR leadership</p>
                     </div>
                   </div>
                 </div>
@@ -236,8 +236,8 @@ export default function Home() {
             <div>
               <SectionHeading
                 eyebrow="Why HRME"
-                title="Credentials that mean something — used differently."
-                description="Most HR consultants lead with compliance. Our consultants lead with the question behind it: why are people behaving this way? Then we bring the credentials to bear on the answer."
+                title="Credentials that mean something — used to actually build."
+                description="Most HR consultants stop at advice. Our consultants bring the same credentials to bear on building the real thing — contracts, policies, and processes that hold up."
               />
               <Reveal delay={0.1}>
                 <Link to="/about" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-brand">

@@ -25,10 +25,10 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              HR consulting that diagnoses the psychological <em className="not-italic font-medium text-ink">why</em> behind workplace problems, not just the policy fix. A psychology-literate HR consultancy for Singapore SMEs.
+              We build the HR foundation Singapore SMEs are missing — contracts, policies, onboarding, performance, payroll, and offboarding.
             </p>
             <p className="mt-6 text-sm text-muted-foreground">
-              A product of <span className="font-medium text-ink">HRM Pte Ltd</span>, Singapore.
+              A product of <span className="font-medium text-ink">HRME Pte Ltd</span>, Singapore.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 sm:flex-row sm:items-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} HRM Pte Ltd. All rights reserved. HRME and the HRME wordmark are trademarks of HRM Pte Ltd.
+            © {new Date().getFullYear()} HRME Pte Ltd. All rights reserved. HRME and the HRME wordmark are trademarks of HRME Pte Ltd.
           </p>
           <p className="text-xs text-muted-foreground">
             SHRM-SCP · IHRP-SP credentialed consultants · Organisational psychology foundation

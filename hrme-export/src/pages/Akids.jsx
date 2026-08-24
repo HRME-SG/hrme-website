@@ -26,7 +26,7 @@ export default function Akids() {
         },
         {
           heading: "Data storage & security",
-          body: "Any anonymous analytics are processed and stored on secure infrastructure operated by HRM Pte Ltd. We do not store personal data of child users.",
+          body: "Any anonymous analytics are processed and stored on secure infrastructure operated by HRME Pte Ltd. We do not store personal data of child users.",
         },
         {
           heading: "Your rights",

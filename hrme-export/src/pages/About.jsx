@@ -84,7 +84,7 @@ export default function About() {
             {[
               { tag: "SHRM-SCP", title: "Senior Certified Professional", body: "The senior global HR credential — strategy, behavioural competency, and the full people function." },
               { tag: "IHRP-SP", title: "Singapore HR, Senior", body: "The Singapore standard for senior HR practitioners, mapped to local employment law and practice." },
-              { tag: "13+ years", title: "Hands-on HR leadership", body: "Built HR functions from scratch at multiple companies — not theory, direct experience standing up the same six pillars we build for clients." },
+              { tag: "10+ years", title: "Hands-on HR leadership", body: "Built HR functions from scratch at multiple companies — not theory, direct experience standing up the same six pillars we build for clients." },
             ].map((c, i) => (
               <Reveal key={c.tag} delay={i * 0.08}>
                 <div className="card-lift h-full rounded-2xl border border-border bg-card p-8">
@@ -131,10 +131,10 @@ export default function About() {
             <div className="rounded-3xl border border-border bg-card p-10 text-center shadow-sm sm:p-14">
               <Users className="mx-auto text-brand" size={32} />
               <h2 className="mt-6 font-heading text-2xl font-600 text-ink sm:text-3xl">
-                A team of consultants, not a single founder's story.
+                An institutional firm, built on a shared method.
               </h2>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                HRME was built as an institutional firm. When you work with us, you get the combined judgment of consultants who've held senior HR roles and built HR functions from the ground up — backed by a shared method and a shared standard. No single point of failure, no solo bandwidth limits.
+                HRME's consultants have held senior HR roles and built HR functions from the ground up across multiple companies. Every engagement draws on that same standard and method — so what we build for you holds up.
               </p>
               <Link
                 to="/contact"

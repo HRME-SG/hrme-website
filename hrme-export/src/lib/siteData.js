@@ -106,36 +106,36 @@ export const PAIN_POINTS = [
   "We don't actually have compliant contracts, policies, or a real onboarding process — just whatever's in someone's head.",
   "Every time someone underperforms or leaves, we're improvising the process from scratch.",
   "We tried a generic HR template pack and it didn't fit how we actually operate.",
-  "I need someone who understands both the psychology and the paperwork.",
+  "I don't have time to build this properly myself, and I can't afford to get it wrong.",
 ];
 
 export const DIAGNOSES = [
-  { fix: "Update the employee handbook", cause: "They don't feel safe raising it" },
-  { fix: "Rewrite the performance review", cause: "Managers avoid the hard conversation" },
-  { fix: "Run another engagement survey", cause: "No one trusts it's anonymous" },
-  { fix: "Hire an HR manager to 'fix things'", cause: "You need judgment, not another pair of hands" },
+  { fix: "Copy a contract template off the internet", cause: "It doesn't match your actual employment terms" },
+  { fix: "Email out a policy as a PDF", cause: "No one read it, and no manager was briefed on it" },
+  { fix: "Improvise the exit conversation", cause: "Every departure gets handled differently — and inconsistently" },
+  { fix: "Hire an HR manager to 'fix things'", cause: "You need the foundation built first, not another hire" },
 ];
 
 export const METHOD_STEPS = [
   {
     step: "01",
-    title: "Diagnose",
-    body: "We map the symptom you're seeing — turnover, conflict, drift — and trace it to the behaviour underneath.",
+    title: "Assess",
+    body: "We map which of the six pillars are missing, weak, or out of date for your business specifically.",
   },
   {
     step: "02",
-    title: "Decode",
-    body: "Our consultants read the organisational psychology behind it: safety, role clarity, recognition, trust.",
+    title: "Build",
+    body: "We draft the actual contracts, policies, and processes — tailored to your business, not templated.",
   },
   {
     step: "03",
-    title: "Design",
-    body: "We design the intervention — policy, system, or conversation — that actually shifts the behaviour.",
+    title: "Document",
+    body: "Everything is written clearly and packaged so your team can actually reference and use it.",
   },
   {
     step: "04",
-    title: "Deploy",
-    body: "We build it with you and hand it over ready to use — documented, trained, and yours to run.",
+    title: "Handover",
+    body: "We brief your managers on what's changed and make sure it's adopted, not just filed away.",
   },
 ];
 

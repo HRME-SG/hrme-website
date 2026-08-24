@@ -30,7 +30,7 @@ export default function JobSea() {
         },
         {
           heading: "Data storage & security",
-          body: "Data is stored on secure infrastructure operated by HRM Pte Ltd and its processors, with encryption in transit and at rest and access limited to authorised personnel.",
+          body: "Data is stored on secure infrastructure operated by HRME Pte Ltd and its processors, with encryption in transit and at rest and access limited to authorised personnel.",
         },
         {
           heading: "Your rights",

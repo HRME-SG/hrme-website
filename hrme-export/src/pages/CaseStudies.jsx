@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Wrench, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Wrench, AlertCircle, CheckCircle2 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
@@ -44,35 +43,19 @@ export default function CaseStudies() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-6 font-heading text-4xl font-700 leading-[1.08] text-white sm:text-5xl md:text-6xl">
-              The gap, not the <span className="text-gradient-brand">logo drop.</span>
+              The gaps we find. <span className="text-gradient-brand">The systems we build.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
-              We don't trade in invented client names. Here's the honest version: the recurring HR gaps our consultants find across Singapore SMEs — and what got built to close them.
+              The recurring HR gaps our consultants find across Singapore SMEs — and the systems we built to close them.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* HONEST SOCIAL PROOF */}
-      <section className="bg-paper py-20">
-        <div className="mx-auto max-w-4xl px-6">
-          <Reveal>
-            <div className="rounded-2xl border border-border bg-brand-soft/40 p-8 text-center">
-              <p className="font-heading text-xl font-500 text-ink sm:text-2xl">
-                Building HR foundations for Singapore SMEs across <span className="text-brand">tech, professional services, and retail.</span>
-              </p>
-              <p className="mx-auto mt-4 max-w-xl text-sm text-muted-foreground">
-                We keep client identities confidential. When we have permission to share named outcomes, they'll live here.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* PATTERNS */}
-      <section className="bg-paper pb-24 sm:pb-32">
+      <section className="bg-paper py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             eyebrow="Recurring gaps"
@@ -111,15 +94,6 @@ export default function CaseStudies() {
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={0.1}>
-            <div className="mt-12 flex items-start gap-3 rounded-2xl border border-dashed border-border bg-paper-2/60 p-6">
-              <AlertCircle size={18} className="mt-0.5 shrink-0 text-amber-500" />
-              <p className="text-sm text-muted-foreground">
-                <span className="font-medium text-ink">This is the section most worth filling with real outcomes.</span> If you have anonymised results — an onboarding time that dropped, a compliance gap that closed, a process that finally stuck — they belong here and would materially lift credibility. Flagged for when you're ready.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 

@@ -48,12 +48,12 @@ export default function Contact() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-6 font-heading text-4xl font-700 leading-[1.08] text-white sm:text-5xl md:text-6xl">
-              Tell us the symptom. <span className="text-gradient-brand">We'll find the cause.</span>
+              Tell us what's missing. <span className="text-gradient-brand">We'll help you build it.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
-              Book a consultation with our consultants. We'll map the behaviour behind the issue before we touch a single policy.
+              Book a consultation with our consultants. We'll walk through what your business has and what it's missing, before we build anything.
             </p>
           </Reveal>
         </div>
@@ -170,7 +170,7 @@ export default function Contact() {
                     <Mail size={16} /> {CONTACT_EMAIL}
                   </a>
                   <p className="mt-5 text-sm text-muted-foreground">
-                    HRM Pte Ltd, Singapore. Consultancy engagements across the five HRME services.
+                    HRME Pte Ltd, Singapore. HR foundation building across six core pillars.
                   </p>
                 </div>
               </Reveal>

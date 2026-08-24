@@ -30,7 +30,7 @@ export default function Noti() {
         },
         {
           heading: "Data storage & security",
-          body: "Data is stored on secure infrastructure operated by HRM Pte Ltd and its processors. We use encryption in transit and at rest and limit access to authorised personnel.",
+          body: "Data is stored on secure infrastructure operated by HRME Pte Ltd and its processors. We use encryption in transit and at rest and limit access to authorised personnel.",
         },
         {
           heading: "Your rights",

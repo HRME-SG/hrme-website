@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Shield, Mail, ArrowLeft, Check } from "lucide-react";
 
 /**
- * Reusable landing page for HRM Pte Ltd's standalone apps (AKids, NOTI, JobSea).
+ * Reusable landing page for HRME Pte Ltd's standalone apps (AKids, NOTI, JobSea).
  * Each app carries its own distinct sub-brand identity, independent of HRME's
  * navy/indigo system. Used to satisfy App Store / Google Play privacy-policy
  * and support-URL requirements with stable, permanent URLs.
@@ -162,7 +162,7 @@ export default function AppLanding({
                 {appName}
               </p>
               <p className="mt-1 text-sm text-gray-500">
-                A product of <span className="font-medium text-gray-700">HRM Pte Ltd</span>, Singapore.
+                A product of <span className="font-medium text-gray-700">HRME Pte Ltd</span>, Singapore.
               </p>
             </div>
             <Link
@@ -173,7 +173,7 @@ export default function AppLanding({
             </Link>
           </div>
           <p className="mt-6 text-xs text-gray-400">
-            © {new Date().getFullYear()} HRM Pte Ltd. All rights reserved.
+            © {new Date().getFullYear()} HRME Pte Ltd. All rights reserved.
           </p>
         </div>
       </footer>

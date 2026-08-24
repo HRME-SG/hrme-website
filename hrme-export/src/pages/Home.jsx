@@ -21,7 +21,7 @@ export default function Home() {
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-2" />
-                HR consulting, diagnosed — not just documented
+                We build the HR foundation your business is missing
               </span>
             </Reveal>
             <Reveal delay={0.05}>

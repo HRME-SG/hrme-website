@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { ArrowRight, Check, Mail, Building2, User, MessageSquare, Loader2, AlertCircle } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import useMeta from "@/lib/useMeta";
 
 const CONTACT_EMAIL = "hello@hrme.sg";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xoearlov";
 
 export default function Contact() {
+  useMeta(
+    "Contact HRME | Book an HR Consultation for Your Singapore SME",
+    "Tell us what's missing from your HR foundation — contracts, policies, onboarding, or performance systems — and we'll help you build it."
+  );
   const [form, setForm] = useState({ name: "", company: "", email: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | submitting | done | error
 

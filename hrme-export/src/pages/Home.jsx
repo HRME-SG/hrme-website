@@ -7,8 +7,13 @@ import DiagnosisDevice from "@/components/DiagnosisDevice";
 import DiagnosticReport from "@/components/DiagnosticReport";
 import CTASection from "@/components/CTASection";
 import { PAIN_POINTS, DIAGNOSES, PILLARS, METHOD_STEPS, INSIGHTS } from "@/lib/siteData";
+import useMeta from "@/lib/useMeta";
 
 export default function Home() {
+  useMeta(
+    "HRME — HR Made Easy | HR Foundations for Singapore SMEs",
+    "We build the HR foundation Singapore SMEs are missing — contracts, policies, onboarding, performance, payroll, and offboarding."
+  );
   return (
     <>
       {/* ===== HERO ===== */}

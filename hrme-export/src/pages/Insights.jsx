@@ -6,9 +6,15 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import { INSIGHTS } from "@/lib/siteData";
 
+import useMeta from "@/lib/useMeta";
+
 const TAGS = ["All", "Compliance", "Recruitment", "Policies"];
 
 export default function Insights() {
+  useMeta(
+    "HR Insights for Singapore SMEs | HRME",
+    "Practical insights on the real cost of missing HR foundations — compliance gaps, onboarding, and policy pitfalls for Singapore SMEs."
+  );
   const [filter, setFilter] = useState("All");
   const visible = filter === "All" ? INSIGHTS : INSIGHTS.filter((i) => i.tag === filter);
 

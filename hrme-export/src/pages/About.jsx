@@ -4,6 +4,7 @@ import { ArrowRight, ShieldCheck, Users, Wrench, Layers, FileCheck, Hammer } fro
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import useMeta from "@/lib/useMeta";
 
 const VALUES = [
   { icon: Hammer, title: "Built to be used", body: "We don't hand over a document and disappear. Every system we build is designed to actually run, day to day, not sit in a drawer." },
@@ -13,6 +14,10 @@ const VALUES = [
 ];
 
 export default function About() {
+  useMeta(
+    "About HRME | HR Consultants Building HR Foundations for Singapore SMEs",
+    "HRME is a firm of credentialed HR consultants (SHRM-SCP, IHRP-SP) building the compliance, policy, and process foundations Singapore SMEs are missing."
+  );
   return (
     <>
       {/* HERO */}

@@ -3,6 +3,7 @@ import { Wrench, AlertCircle, CheckCircle2 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import useMeta from "@/lib/useMeta";
 
 const PATTERNS = [
   {
@@ -29,6 +30,10 @@ const PATTERNS = [
 ];
 
 export default function CaseStudies() {
+  useMeta(
+    "HR Case Studies | Real HR Gaps We Close for Singapore SMEs — HRME",
+    "The recurring HR gaps HRME finds across Singapore SMEs in tech, professional services, and retail — and the systems we built to close them."
+  );
   return (
     <>
       {/* HERO */}

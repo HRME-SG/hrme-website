@@ -6,8 +6,13 @@ import SectionHeading from "@/components/SectionHeading";
 import DiagnosisDevice from "@/components/DiagnosisDevice";
 import CTASection from "@/components/CTASection";
 import { PILLARS, ADD_ON } from "@/lib/siteData";
+import useMeta from "@/lib/useMeta";
 
 export default function Services() {
+  useMeta(
+    "HR Services for Singapore SMEs | Compliance, Policies, Payroll & More — HRME",
+    "Six core HR pillars built for your business: compliance foundation, policies and handbook, recruitment and onboarding, performance systems, payroll/HRIS setup, and offboarding."
+  );
   return (
     <>
       {/* HERO */}

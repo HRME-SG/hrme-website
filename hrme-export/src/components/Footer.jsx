@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 const SERVICES = [
-  { label: "HR Advisory & Consulting", path: "/services#advisory" },
-  { label: "Fractional & Outsourced HR", path: "/services#fractional" },
-  { label: "HR Systems Implementation", path: "/services#systems" },
-  { label: "Work Pass Advisory", path: "/services#workpass" },
-  { label: "Workplace Psychology Workshops", path: "/services#workshops" },
+  { label: "Compliance Foundation", path: "/services#compliance" },
+  { label: "Policies & Handbook", path: "/services#policies" },
+  { label: "Recruitment & Onboarding", path: "/services#recruitment" },
+  { label: "Performance & Growth", path: "/services#performance" },
+  { label: "Payroll / HRIS Setup", path: "/services#payroll" },
+  { label: "Exit & Offboarding", path: "/services#offboarding" },
 ];
 
 const COMPANY = [
@@ -15,6 +16,11 @@ const COMPANY = [
   { label: "Case Studies", path: "/case-studies" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
+];
+
+const LEGAL = [
+  { label: "Privacy Policy", path: "/privacy.html" },
+  { label: "Terms of Service", path: "/terms.html" },
 ];
 
 export default function Footer() {
@@ -29,6 +35,10 @@ export default function Footer() {
             </p>
             <p className="mt-6 text-sm text-muted-foreground">
               A product of <span className="font-medium text-ink">HRME Pte Ltd</span>, Singapore.
+            </p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              UEN 202637733M<br />
+              7 Temasek Boulevard, #12-07 Suntec Tower One, Singapore 038987
             </p>
           </div>
 
@@ -79,9 +89,16 @@ export default function Footer() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} HRME Pte Ltd. All rights reserved. HRME and the HRME wordmark are trademarks of HRME Pte Ltd.
           </p>
-          <p className="text-xs text-muted-foreground">
-            SHRM-SCP · IHRP-SP credentialed consultants · Organisational psychology foundation
-          </p>
+          <div className="flex items-center gap-5">
+            {LEGAL.map((l) => (
+              <a key={l.label} href={l.path} className="text-xs text-muted-foreground transition-colors hover:text-brand">
+                {l.label}
+              </a>
+            ))}
+            <p className="text-xs text-muted-foreground">
+              SHRM-SCP · IHRP-SP
+            </p>
+          </div>
         </div>
       </div>
     </footer>

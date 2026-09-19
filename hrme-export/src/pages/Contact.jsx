@@ -138,6 +138,11 @@ export default function Contact() {
                           </p>
                         )}
 
+                        <p className="text-xs leading-relaxed text-muted-foreground">
+                          By submitting this form, you agree to our{" "}
+                          <a href="/privacy.html" className="underline hover:text-brand">Privacy Policy</a> and consent to HRME contacting you regarding your enquiry.
+                        </p>
+
                         <button
                           type="submit"
                           disabled={status === "submitting"}
